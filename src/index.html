@@ -20,17 +20,32 @@
             display: -webkit-flex;
             display: -moz-flex;
             display: flex;
+            flex-direction: row;
             justify-content: center;
             align-items: center;
             height: 100vh;
             background-color: #f5f5f5;
+            flex-wrap: wrap;
+        }
+        h1 {
+            flex: 0 0 100%;
+            text-align: center;
+        }
+        .loading-feat {
+            flex: 0 0 100%;
+            text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div class="page">
+    <div class="page" data-features='["first", "second", "last"]'>
         <h1>Webpack for front-end. (Default Template)</h1>
+        <div class="loading-feat">
+            <div id="first"></div>
+            <div id="second"></div>
+            <div id="last"></div>
+        </div>
     </div>
     <script src="./assets/js/lib/jquery.min.js"></script>
     <script src="assets/dist/app.bundle.js"></script>
